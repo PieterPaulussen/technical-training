@@ -21,6 +21,7 @@ class TShirtOrder(models.Model):
     customer_id = fields.Many2one('res.partner', string="Customer")
     image_url = fields.Char('Image', help="encodes the url of the image")
     is_late = fields.Boolean('Is late', compute='_compute_is_late')
+    name = fields.Char()
     quantity = fields.Integer('Quantity', default="1")
     size = fields.Selection([
         ('s', 'S'),

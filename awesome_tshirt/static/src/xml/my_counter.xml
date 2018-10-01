@@ -2,9 +2,20 @@
 <templates id="template" xml:space="preserve">
 
 <div t-name="MyCounter">
-    <button class="btn btn-icon fa fa-minus o_decrement"/>
-    <span><t t-esc="widget.value"/></span>
-    <button class="btn btn-icon fa fa-plus o_increment"/>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+			    <button class="btn btn-icon fa fa-minus o_decrement"/>
+			    <span><t t-esc="widget.value"/></span>
+			    <button class="btn btn-icon fa fa-plus o_increment"/>
+			</div>
+			<div class="col-md-4">
+				<button type="button" class="btn btn-success o_customers">Customers</button>
+				<button type="button" class="btn btn-success o_neworders">New Orders</button>
+				<button type="button" class="btn btn-success o_cancelled_orders">Cancelled Orders</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 </templates>
